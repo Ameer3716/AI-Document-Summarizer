@@ -1,0 +1,44 @@
+/* EditableViewText.css */
+.editable-view-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 800px;
+    margin: 80px auto;
+    color: white;
+    text-align: center;
+  }
+  
+  .editor {
+    height: 300px;
+    margin-bottom: 16px;
+  }
+  
+  .btn-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .btn-group button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-group button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .error {
+    color: #ff6b6b;
+    margin-bottom: 12px;
+  }
+  

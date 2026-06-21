@@ -1,0 +1,8 @@
+.main-layout {
+    padding-top: 80px; /* Reserve space for fixed header */
+  }
+  
+  .main-content {
+    padding: 16px;
+  }
+  
