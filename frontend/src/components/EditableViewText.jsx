@@ -20,7 +20,7 @@ const EditableViewText = () => {
     setError(null);
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch(`http://localhost:8000/api/documents/${documentId}/`, {
+      const response = await fetch(`${import.meta.env.PROD ? '' : 'http://localhost:8000'}/api/documents/${documentId}/`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

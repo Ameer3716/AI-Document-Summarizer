@@ -33,7 +33,7 @@ const FileUpload = () => {
     const token = localStorage.getItem('authToken');
 
     try {
-      const response = await fetch('http://localhost:8000/api/process/', {
+      const response = await fetch(`${import.meta.env.PROD ? '' : 'http://localhost:8000'}/api/process/`, {
         method: 'POST',
         headers: {
           'Authorization': `Token ${token}`  // Add Authorization header

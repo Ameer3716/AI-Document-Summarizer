@@ -19,7 +19,7 @@ const Dashboard = () => {
       }
 
       try {
-        const res = await fetch('http://localhost:8000/api/documents/', {
+        const res = await fetch(`${import.meta.env.PROD ? '' : 'http://localhost:8000'}/api/documents/`, {
           headers: { 'Authorization': `Token ${token}` }
         });
 
@@ -41,7 +41,7 @@ const Dashboard = () => {
   const handleDelete = async (documentId) => {
     const token = localStorage.getItem('authToken');
     try {
-      const res = await fetch(`http://localhost:8000/api/documents/${documentId}/delete/`, {
+      const res = await fetch(`${import.meta.env.PROD ? '' : 'http://localhost:8000'}/api/documents/${documentId}/delete/`, {
         method: 'DELETE',
         headers: { 'Authorization': `Token ${token}` }
       });
